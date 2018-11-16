@@ -3,3 +3,10 @@ html, body, #root, .App{
   height: 100%;
   width: 100%;
 }
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}

@@ -1,10 +1,28 @@
 import React, { Component } from 'react';
-import './Sidebar.css';
+import './SideBar.scss';
 
-export class Sidebar extends Component {
+const visibleStyle = {
+    marginLeft: '0px',
+    position: 'absolute',
+    zIndex: 999
+};
+
+const hiddenStyle = {
+    marginLeft: '-250px'
+};
+
+export class SideBar extends Component {
+    constructor(props){
+        super(props);
+    }
 
     render(){
-        return <div className="sidebar"></div>;
+        let style = this.props.visible ? visibleStyle : hiddenStyle;
+
+        return (
+            <div className="sidebar" style={style}>
+            </div>
+        );
     }
 
 }
