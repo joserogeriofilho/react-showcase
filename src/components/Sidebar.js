@@ -3,8 +3,6 @@ import './SideBar.scss';
 
 const visibleStyle = {
     marginLeft: '0px',
-    position: 'absolute',
-    zIndex: 999
 };
 
 const hiddenStyle = {

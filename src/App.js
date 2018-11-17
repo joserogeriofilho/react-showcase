@@ -42,6 +42,7 @@ class App extends Component {
 
         <div className="wrapper">
           <BlackenedScreen visible={sideBarVisible} onToggleSideBar={this.toggleSideBar}/>
+          
           <AppBar onToggleSideBar={this.toggleSideBar}/>
           <Content />
         </div>
