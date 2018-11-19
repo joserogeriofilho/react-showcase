@@ -1,0 +1,29 @@
+.navigation-drawer{
+    background: lightgray;
+
+    width: 250px;
+    min-width: 250px;
+    height: 100%;
+
+    position: absolute;
+    transition: .2s ease-in-out;
+
+    z-index: 999;
+
+    .navigation-drawer-header{
+        display: flex;
+        justify-content: center;
+
+        padding: 24px 0 24px 0;
+    }
+
+    ul{
+        padding: 0;
+        
+        li{
+            list-style-type: none;
+            margin: 0;
+            padding: 12px 0 12px 0;
+        }
+    }
+}

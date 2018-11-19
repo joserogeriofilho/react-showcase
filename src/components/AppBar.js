@@ -15,7 +15,7 @@ export class AppBar extends Component {
     render(){
         let style = this.props.screenWidth >= mediaQueries.xl ? desktopSytle : [];
 
-        return <div className="appbar" style={style}><a onClick={this.props.onOpenNavigationDrawer}>Menu</a></div>;
+        return <div className="appbar" style={style}><a onClick={this.props.onOpenNavDrawer}>Menu</a></div>;
     }
 
 }

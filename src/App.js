@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './App.css';
 
-import { NavigationDrawer } from './components/NavigationDrawer';
+import { NavDrawer } from './components/NavDrawer';
 import { AppBar } from './components/AppBar';
 import { Content } from './components/Content';
 import { BlackenedScreen } from './components/BlackenedScreen';
@@ -22,14 +22,14 @@ class App extends Component {
     super(props);
 
     this.state = {
-      sideBarVisible: false,
+      navDrawerOpened: false,
       screenWidth: 0,
       screenHeight: 0
     }
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    this.openNavigationDrawer = this.openNavigationDrawer.bind(this);
-    this.closeNavigationDrawer = this.closeNavigationDrawer.bind(this);
+    this.openNavDrawer = this.openNavDrawer.bind(this);
+    this.closeNavDrawer = this.closeNavDrawer.bind(this);
   }
 
   componentDidMount() {
@@ -45,37 +45,37 @@ class App extends Component {
     this.setState({ screenWidth: window.innerWidth, screenHeight: window.innerHeight });
   }
 
-  openNavigationDrawer(){
+  openNavDrawer(){
     this.setState({
-      sideBarVisible: true
+      navDrawerOpened: true
     });
   }
 
-  closeNavigationDrawer(){
+  closeNavDrawer(){
     this.setState({
-      sideBarVisible: false
+      navDrawerOpened: false
     });
   }
 
   render() {
-    let sideBarVisible = this.state.sideBarVisible;
+    let navDrawerOpened = this.state.navDrawerOpened;
     let screenWidth = this.state.screenWidth;
-    let closeNavigationDrawer = this.closeNavigationDrawer;
-    let openNavigationDrawer = this.openNavigationDrawer;
+    let closeNavDrawer = this.closeNavDrawer;
+    let openNavDrawer = this.openNavDrawer;
 
     return (
       <BrowserRouter>
         <div className="App">
-            <NavigationDrawer
+            <NavDrawer
               screenWidth={screenWidth}
-              visible={sideBarVisible}
-              onCloseNavigationDrawer={closeNavigationDrawer}
+              visible={navDrawerOpened}
+              onCloseNavDrawer={closeNavDrawer}
             />
 
             <div className="wrapper">
-              <BlackenedScreen visible={sideBarVisible} onCloseNavigationDrawer={closeNavigationDrawer}/>
+              <BlackenedScreen visible={navDrawerOpened} onCloseNavDrawer={closeNavDrawer}/>
               
-              <AppBar screenWidth={screenWidth} onOpenNavigationDrawer={openNavigationDrawer}/>
+              <AppBar screenWidth={screenWidth} onOpenNavDrawer={openNavDrawer}/>
               <Content screenWidth={screenWidth}/>
             </div>
         </div>

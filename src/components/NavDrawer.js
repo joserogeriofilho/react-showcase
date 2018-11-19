@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { mediaQueries } from '../App';
 
-import './NavigationDrawer.scss';
+import './NavDrawer.scss';
 
 const visibleStyle = {
     marginLeft: '0px',
@@ -17,7 +17,7 @@ const desktopSytle = {
     position: 'relative'
 }
 
-export class NavigationDrawer extends Component {
+export class NavDrawer extends Component {
     constructor(props){
         super(props);
     }
@@ -32,10 +32,13 @@ export class NavigationDrawer extends Component {
         }
 
         return (
-            <div className="sidebar" style={style}>
+            <div className="navigation-drawer" style={style}>
+                <div className="navigation-drawer-header">
+                    <h1>LOGO</h1>
+                </div>
                 <ul>
-                    <li><Link onClick={this.props.onCloseNavigationDrawer} to="/sobre">Sobre</Link></li>
-                    <li><Link onClick={this.props.onCloseNavigationDrawer} to="/components">Components</Link></li>
+                    <li><Link onClick={this.props.onCloseNavDrawer} to="/sobre">Sobre</Link></li>
+                    <li><Link onClick={this.props.onCloseNavDrawer} to="/components">Components</Link></li>
                 </ul>
             </div>
         );
