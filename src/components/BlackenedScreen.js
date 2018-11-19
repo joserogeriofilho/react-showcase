@@ -12,7 +12,7 @@ export class BlackenedScreen extends Component {
         return(
             <div className="blackened-screen"
                 style={style}
-                onClick={this.props.onToggleSideBar}>
+                onClick={this.props.onCloseNavigationDrawer}>
             </div>
         );
     }

@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
+import { mediaQueries } from '../App';
+
 import './AppBar.scss';
+
+const desktopSytle = {
+    display: 'none'
+}
 
 export class AppBar extends Component {
     constructor(props){
@@ -7,7 +13,9 @@ export class AppBar extends Component {
     }
 
     render(){
-        return <div className="appbar"><a onClick={this.props.onToggleSideBar}>Menu</a></div>;
+        let style = this.props.screenWidth >= mediaQueries.xl ? desktopSytle : [];
+
+        return <div className="appbar" style={style}><a onClick={this.props.onOpenNavigationDrawer}>Menu</a></div>;
     }
 
 }

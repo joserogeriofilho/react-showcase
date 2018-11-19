@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
 import './App.css';
 
-import { SideBar } from './components/SideBar';
+import { NavigationDrawer } from './components/NavigationDrawer';
 import { AppBar } from './components/AppBar';
 import { Content } from './components/Content';
 import { BlackenedScreen } from './components/BlackenedScreen';
 
-const mediaQueries = {
+export const mediaQueries = {
   xs: 0,
   sm: 576,
   md: 768,
   lg: 992,
   xl: 1200
-};
+}
 
 class App extends Component {
 
@@ -20,34 +22,64 @@ class App extends Component {
     super(props);
 
     this.state = {
-      sideBarVisible: false
+      sideBarVisible: false,
+      screenWidth: 0,
+      screenHeight: 0
     }
 
-    this.toggleSideBar = this.toggleSideBar.bind(this);
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.openNavigationDrawer = this.openNavigationDrawer.bind(this);
+    this.closeNavigationDrawer = this.closeNavigationDrawer.bind(this);
   }
 
-  toggleSideBar(){
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  updateWindowDimensions() {
+    this.setState({ screenWidth: window.innerWidth, screenHeight: window.innerHeight });
+  }
+
+  openNavigationDrawer(){
     this.setState({
-      sideBarVisible : this.state.sideBarVisible ? false : true
+      sideBarVisible: true
+    });
+  }
+
+  closeNavigationDrawer(){
+    this.setState({
+      sideBarVisible: false
     });
   }
 
   render() {
     let sideBarVisible = this.state.sideBarVisible;
+    let screenWidth = this.state.screenWidth;
+    let closeNavigationDrawer = this.closeNavigationDrawer;
+    let openNavigationDrawer = this.openNavigationDrawer;
 
     return (
-      <div className="App">
+      <BrowserRouter>
+        <div className="App">
+            <NavigationDrawer
+              screenWidth={screenWidth}
+              visible={sideBarVisible}
+              onCloseNavigationDrawer={closeNavigationDrawer}
+            />
 
-        <SideBar visible={sideBarVisible}/>
-
-        <div className="wrapper">
-          <BlackenedScreen visible={sideBarVisible} onToggleSideBar={this.toggleSideBar}/>
-          
-          <AppBar onToggleSideBar={this.toggleSideBar}/>
-          <Content />
+            <div className="wrapper">
+              <BlackenedScreen visible={sideBarVisible} onCloseNavigationDrawer={closeNavigationDrawer}/>
+              
+              <AppBar screenWidth={screenWidth} onOpenNavigationDrawer={openNavigationDrawer}/>
+              <Content screenWidth={screenWidth}/>
+            </div>
         </div>
-
-      </div>
+      </BrowserRouter>
     );
   }
 
