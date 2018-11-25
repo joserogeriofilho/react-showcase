@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-import './App.css';
+import './App.scss';
 
-import { NavDrawer } from './components/NavDrawer';
-import { AppBar } from './components/AppBar';
-import { Content } from './components/Content';
-import { BlackenedScreen } from './components/BlackenedScreen';
+import { NavDrawer } from './layout/NavDrawer';
+import { AppBar } from './layout/AppBar';
+import { Content } from './layout/Content';
+import { BlackenedScreen } from './layout/BlackenedScreen';
 
 export const mediaQueries = {
   xs: 0,

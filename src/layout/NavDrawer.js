@@ -37,8 +37,9 @@ export class NavDrawer extends Component {
                     <h1>LOGO</h1>
                 </div>
                 <ul>
-                    <li><Link onClick={this.props.onCloseNavDrawer} to="/sobre">Sobre</Link></li>
-                    <li><Link onClick={this.props.onCloseNavDrawer} to="/components">Components</Link></li>
+                    <li><Link onClick={this.props.onCloseNavDrawer} to="/advancedsearch">Advanced Searh</Link></li>
+                    <li><Link onClick={this.props.onCloseNavDrawer} to="/userregistration">User Registration</Link></li>
+                    <li><Link onClick={this.props.onCloseNavDrawer} to="/cardgrid">Card Grid</Link></li>
                 </ul>
             </div>
         );
