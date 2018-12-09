@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { UserItem } from './UserItem';
+
 const API = 'https://jsonplaceholder.typicode.com/';
 const DEFAULT_QUERY = 'users';
 
@@ -46,9 +48,7 @@ export class UserList extends Component{
         return(
             <div>
                 {users.map(u =>
-                    <p>
-                        id={u.id} name={u.name} username={u.username} email={u.email} 
-                    </p>
+                    <UserItem key={u.id} name={u.name} username={u.username} email={u.email} />
                 )}
             </div>
         );

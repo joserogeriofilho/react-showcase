@@ -1,9 +1,9 @@
 import React from 'react';
 import { MediaCard } from './MediaCard';
 
-import './MediaCardList.scss';
+import './MediaCardGrid.scss';
 
-export function MediaCardList(props) {
+export function MediaCardGrid(props) {
     return (
         <div className="row">
             {props.cards.map(c =>

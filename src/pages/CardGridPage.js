@@ -1,5 +1,5 @@
 import React from 'react';
-import { MediaCardList } from '../layout/MediaCardList';
+import { MediaCardGrid } from '../layout/MediaCardGrid';
 
 var cards = [
     {id: 0, image: 'White Dove', title: 'White Dove', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at magna eros. Praesent et egestas diam. Praesent ultrices in nisi non euismod.'},
@@ -18,7 +18,7 @@ export function CardGridPage(props) {
                 </div>
             </div>
 
-            <MediaCardList cards={cards} />
+            <MediaCardGrid cards={cards} />
         </div>
     );
 }

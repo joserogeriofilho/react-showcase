@@ -1,0 +1,11 @@
+.user-item{
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: lightgrey;
+
+    padding: 16px 0 16px 0;
+
+    &:last-child{
+        border-width: 0;
+    }
+}
