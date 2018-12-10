@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './UserItem.scss';
-
 export function UserItem(props) {
     return (
         <div className="row user-item" key={props.id}>

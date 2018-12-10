@@ -8,13 +8,6 @@ import { AppBar } from './layout/AppBar';
 import { Content } from './layout/Content';
 import { BlackenedScreen } from './layout/BlackenedScreen';
 
-export const mediaQueries = {
-  xs: 0,
-  sm: 576,
-  md: 768,
-  lg: 992,
-  xl: 1200
-}
 
 class App extends Component {
 
@@ -67,7 +60,6 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
             <NavDrawer
-              screenWidth={screenWidth}
               visible={navDrawerOpened}
               onCloseNavDrawer={closeNavDrawer}
             />

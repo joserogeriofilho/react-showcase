@@ -48,7 +48,11 @@ export class UserList extends Component{
         return(
             <div>
                 {users.map(u =>
-                    <UserItem key={u.id} name={u.name} username={u.username} email={u.email} />
+                    <UserItem
+                        key={u.id}
+                        name={u.name}
+                        username={u.username}
+                        email={u.email} />
                 )}
             </div>
         );

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './MediaCard.scss';
-
 export function MediaCard(props) {
     return (
         <div key={props.id} className="col-sm">

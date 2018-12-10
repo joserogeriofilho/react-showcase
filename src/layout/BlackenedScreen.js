@@ -1,20 +1,12 @@
-import React, { Component } from 'react';
-import './BlackenedScreen.scss';
+import React from 'react';
 
-export class BlackenedScreen extends Component {
-    constructor(props){
-        super(props);
-    }
+export function BlackenedScreen(props) {
+    let style = props.visible ? {display: 'block'} : {display: 'none'};
 
-    render(){
-        let style = this.props.visible ? {display: 'block'} : {display: 'none'};
-
-        return(
-            <div className="blackened-screen"
-                style={style}
-                onClick={this.props.onCloseNavDrawer}>
-            </div>
-        );
-    }
-
+    return(
+        <div className="blackened-screen"
+            style={style}
+            onClick={props.onCloseNavDrawer}>
+        </div>
+    );
 }

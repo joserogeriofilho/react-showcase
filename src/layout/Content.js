@@ -5,10 +5,7 @@ import { AdvancedSearchPage } from '../pages/AdvancedSearchPage';
 import { UserRegistrationPage } from '../pages/UserRegistrationPage';
 import { CardGridPage } from '../pages/CardGridPage';
 
-import './Content.scss';
-
 export class Content extends Component {
-
     render(){
         return (
             <Switch>
@@ -21,5 +18,4 @@ export class Content extends Component {
             </Switch>
         );
     }
-
 }

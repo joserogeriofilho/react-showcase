@@ -1,7 +1,11 @@
-.appbar{
+.app-bar{
     background: lightgray;
     display: block;
     min-height: 56px;
     padding: 16px;
     width: 100%;
+
+    @include media-breakpoint-up(xl){
+        display: none;
+    }
 }

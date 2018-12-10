@@ -3,6 +3,7 @@
 
     width: 256px;
     height: 100%;
+    margin-left: -256px;
     min-width: 256px;
     padding: 16px;
 
@@ -10,6 +11,15 @@
     transition: .2s ease-in-out;
 
     z-index: 999;
+
+    @include media-breakpoint-up(xl){
+        margin-left: 0px;
+        position: relative;
+    }
+
+    &.nav-drawer-visible{
+        margin-left: 0px;
+    }
 
     .navigation-drawer-header{
         display: flex;

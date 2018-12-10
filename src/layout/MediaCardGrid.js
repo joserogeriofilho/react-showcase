@@ -1,8 +1,6 @@
 import React from 'react';
 import { MediaCard } from './MediaCard';
 
-import './MediaCardGrid.scss';
-
 export function MediaCardGrid(props) {
     return (
         <div className="row">

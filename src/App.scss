@@ -1,14 +1,10 @@
 @import 'bootstrap/scss/bootstrap.scss';
 
-html, body, #root, .App{
-  display: flex;
-  height: 100%;
-  width: 100%;
-}
-
-.wrapper{
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-}
+@import 'scss/AppBar.scss';
+@import 'scss/BlackenedScreen.scss';
+@import 'scss/Content.scss';
+@import 'scss/Layout.scss';
+@import 'scss/MediaCard.scss';
+@import 'scss/MediaCardGrid.scss';
+@import 'scss/NavDrawer.scss';
+@import 'scss/UserItem.scss';
