@@ -1,9 +1,24 @@
 import React, { Component }   from 'react';
 import { UserList } from '../layout/UserList';
 
+const API = 'http://localhost:3001/';
+const DEFAULT_QUERY = 'users';
+
 export class UserRegistrationPage extends Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            users: [],
+            isLoading: false,
+            error: null
+        };
+
+        this.getUsers = this.getUsers.bind(this);
+    }
+
     postNewUser(){
-        fetch('http://localhost:3001/users',
+        fetch(API + DEFAULT_QUERY,
             {
                 method: 'POST',
                 headers: new Headers({'Content-Type': 'application/json'}),
@@ -19,7 +34,30 @@ export class UserRegistrationPage extends Component {
         .catch((err) => console.log(err));
     }
 
+    getUsers() {
+        this.setState({ isLoading: true });
+
+        fetch(API + DEFAULT_QUERY)
+            .then(response => {
+                if(response.ok) {
+                    return response.json()
+                } else {
+                    throw new Error('Something went wrong...')
+                }
+            })
+            .then(data => this.setState({ users: data, isLoading: false}))
+            .catch(error => this.setState({ error, isLoading: false }));
+    }
+
+    componentDidMount() {
+        this.getUsers();
+    }
+
     render(){
+        const users = this.state.users;
+        const isLoading = this.state.isLoading;
+        const error = this.state.error;
+
         return (
             <div className="content container-fluid">
                 <div className="row mb-4">
@@ -58,7 +96,7 @@ export class UserRegistrationPage extends Component {
                     <div className="card-header">List of Users</div>
     
                     <div className="card-body">
-                        <UserList />
+                        <UserList users={users} isLoading={isLoading} error={error} />
                     </div>
                 </div>
     
