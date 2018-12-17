@@ -4,13 +4,16 @@ export function UserItem(props) {
     return (
         <div className="row user-item" key={props.id}>
             <div className="col-sm">
-                name={props.name}
+                {props.lastName}
             </div>
             <div className="col-sm">
-                username={props.username}
+                {props.firstName}
             </div>
             <div className="col-sm">
-                email={props.email}
+                {props.username}
+            </div>
+            <div className="col-sm">
+                {props.email}
             </div>
         </div>
     );
