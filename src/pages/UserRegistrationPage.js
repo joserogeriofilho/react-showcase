@@ -2,7 +2,7 @@ import React, { Component }   from 'react';
 import { UserList } from '../layout/UserList';
 
 const API = 'http://localhost:3001/';
-const DEFAULT_QUERY = 'users';
+const DEFAULT_QUERY = 'users?_sort=id&_order=desc';
 
 export class UserRegistrationPage extends Component {
     constructor(props){
@@ -11,18 +11,29 @@ export class UserRegistrationPage extends Component {
         this.state = {
             users: [],
             isLoading: false,
-            error: null
+            error: null,
+            lastName: '',
+            firstName: '',
+            userName: '',
+            email: ''
         };
 
         this.getUsers = this.getUsers.bind(this);
+        this.postNewUser = this.postNewUser.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     postNewUser(){
+        const lastName = this.state.lastName;
+        const firstName = this.state.firstName;
+        const userName = this.state.userName;
+        const email = this.state.email;
+
         fetch(API + DEFAULT_QUERY,
             {
                 method: 'POST',
                 headers: new Headers({'Content-Type': 'application/json'}),
-                body: JSON.stringify({firstName:"x", lastName:"x", userName:"x", email:"x"})
+                body: JSON.stringify({firstName:firstName, lastName:lastName, userName:userName, email:email})
             }
         ).then(response => {
             if(response.ok) {
@@ -30,8 +41,12 @@ export class UserRegistrationPage extends Component {
             } else {
                 throw new Error('Something went wrong...')
             }
-        }).then((data) => console.log(data))
+        }).then((data) => {
+            console.log('Insertion of ' + JSON.stringify(data));
+            this.getUsers();
+        })
         .catch((err) => console.log(err));
+
     }
 
     getUsers() {
@@ -49,6 +64,12 @@ export class UserRegistrationPage extends Component {
             .catch(error => this.setState({ error, isLoading: false }));
     }
 
+    handleChange(event){
+        let change = {};
+        change[event.target.id] = event.target.value;
+        this.setState(change);
+    }
+
     componentDidMount() {
         this.getUsers();
     }
@@ -57,6 +78,13 @@ export class UserRegistrationPage extends Component {
         const users = this.state.users;
         const isLoading = this.state.isLoading;
         const error = this.state.error;
+
+        const handleChange = this.handleChange;
+
+        const lastName = this.state.lastName;
+        const firstName = this.state.firstName;
+        const userName = this.state.userName;
+        const email = this.state.email;
 
         return (
             <div className="content container-fluid">
@@ -74,15 +102,56 @@ export class UserRegistrationPage extends Component {
                         <div className="row">
                             <div className="col">
                                 <div className="form-group">
-                                    <label htmlFor="inputName">Name</label>
-                                    <input type="text" className="form-control" id="inputName" placeholder="Enter your name" />
+                                    <label htmlFor="lastName">Last Name</label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="lastName"
+                                        value={lastName}
+                                        onChange={handleChange}
+                                        placeholder="Enter your last name" />
                                 </div>       
                             </div>
-    
+
                             <div className="col">
                                 <div className="form-group">
-                                    <label htmlFor="exampleInputEmail1">Email address</label>
-                                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                                    <label htmlFor="firstName">First Name</label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="firstName"
+                                        value={firstName}
+                                        onChange={handleChange}
+                                        placeholder="Enter your first name" />
+                                </div>       
+                            </div>
+
+                            <div className="col">
+                                <div className="form-group">
+                                    <label htmlFor="userName">User Name</label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="userName"
+                                        value={userName}
+                                        onChange={handleChange}
+                                        placeholder="Enter your user name" />
+                                </div>       
+                            </div>
+                        </div>
+
+                        <div className="row">    
+                            <div className="col-8">
+                                <div className="form-group">
+                                    <label htmlFor="email">Email address</label>
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        id="email"
+                                        value={email}
+                                        onChange={handleChange}
+                                        aria-describedby="emailHelp"
+                                        placeholder="Enter email" />
                                     <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                                 </div>
                             </div>
