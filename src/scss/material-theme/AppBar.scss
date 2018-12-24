@@ -1,0 +1,22 @@
+.regular-top-app-bar{
+    background-color: $primary;
+    color: $text;
+    height: 56px;
+
+    display: flex;
+    flex-direction: row;
+
+    .app-bar-navigation-icon{
+        font-size: 24px;
+        line-height: inherit;
+    }
+
+    .app-bar-title{
+        margin-left: 32px;
+
+        h6{
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+}

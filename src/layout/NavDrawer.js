@@ -5,15 +5,17 @@ export function NavDrawer(props) {
     let navDrawerVisibleClass = props.visible ? "nav-drawer-visible" : "";
 
     return (
-        <div className={"navigation-drawer " + navDrawerVisibleClass}>
-            <div className="navigation-drawer-header">
-                <h1>LOGO</h1>
+        <div className={"nav-drawer " + navDrawerVisibleClass}>
+            <div className="nav-drawer-header">
+                <h2>LOGO</h2>
             </div>
-            <ul>
-                <li><Link onClick={props.onCloseNavDrawer} to="/advancedsearch">Advanced Search</Link></li>
-                <li><Link onClick={props.onCloseNavDrawer} to="/userregistration">User Registration</Link></li>
-                <li><Link onClick={props.onCloseNavDrawer} to="/cardgrid">Card Grid</Link></li>
-            </ul>
+            <div className="nav-drawer-body">
+                <ul>
+                    <li><Link onClick={props.onCloseNavDrawer} to="/advancedsearch">Advanced Search</Link></li>
+                    <li><Link onClick={props.onCloseNavDrawer} to="/userregistration">User Registration</Link></li>
+                    <li><Link onClick={props.onCloseNavDrawer} to="/cardgrid">Card Grid</Link></li>
+                </ul>
+            </div>
         </div>
     );
 }

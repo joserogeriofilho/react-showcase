@@ -1,11 +1,10 @@
-.navigation-drawer{
+.nav-drawer{
     background: lightgray;
 
     width: 256px;
     height: 100%;
     margin-left: -256px;
     min-width: 256px;
-    padding: 16px;
 
     position: absolute;
     transition: .2s ease-in-out;
@@ -21,20 +20,24 @@
         margin-left: 0px;
     }
 
-    .navigation-drawer-header{
+    .nav-drawer-header{
         display: flex;
+        align-items: center;
         justify-content: center;
 
-        padding: 24px 0 24px 0;
+        height: 128px;
     }
 
-    ul{
-        padding: 0;
-        
-        li{
-            list-style-type: none;
-            margin: 0;
-            padding: 12px 0 12px 0;
+    .nav-drawer-body{
+        padding: 16px;
+
+        ul{
+            padding: 0;
+            
+            li{
+                list-style-type: none;
+                margin: 12px 0 12px 0;
+            }
         }
     }
 }
