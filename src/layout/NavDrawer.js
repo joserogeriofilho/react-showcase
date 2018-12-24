@@ -7,7 +7,7 @@ export function NavDrawer(props) {
     return (
         <div className={"nav-drawer " + navDrawerVisibleClass}>
             <div className="nav-drawer-header">
-                <h2>LOGO</h2>
+                <h6>REACT SHOWCASE</h6>
             </div>
             <div className="nav-drawer-body">
                 <ul>

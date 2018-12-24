@@ -186,6 +186,13 @@
       "userName": "john666",
       "email": "john666@gmail.com",
       "id": 22
+    },
+    {
+      "firstName": "Bruno",
+      "lastName": "Anacleto",
+      "userName": "banacleto",
+      "email": "banacleto@gmail.com",
+      "id": 23
     }
   ]
 }

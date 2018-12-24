@@ -4,8 +4,8 @@ export function MediaCard(props) {
     return (
         <div key={props.id} className="col-sm">
             <div className="media-card">
-                <p>{props.image}</p>
-                <h3>{props.title}</h3>
+                <span className="overline">{props.image}</span>
+                <h5>{props.title}</h5>
                 <p>{props.description}</p>
             </div>
         </div>

@@ -1,7 +1,10 @@
 .regular-top-app-bar{
     background-color: $primary;
+    @include elevation(4);
+
     color: $text;
     height: 56px;
+    z-index: 50;
 
     display: flex;
     flex-direction: row;

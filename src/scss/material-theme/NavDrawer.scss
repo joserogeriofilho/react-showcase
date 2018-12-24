@@ -8,7 +8,7 @@
     }
 
     &.nav-drawer-visible{
-        box-shadow: $elevation-12dp;
+        @include elevation(16);
     }
 
     .nav-drawer-header{

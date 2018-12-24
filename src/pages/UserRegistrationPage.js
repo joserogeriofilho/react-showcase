@@ -90,8 +90,8 @@ export class UserRegistrationPage extends Component {
             <div className="content container-fluid">
                 <div className="row mb-4">
                     <div className="col-sm">
-                        <h1 className="display-4">User Registration</h1>
-                        <p className="lead">This page shows an example of a simple user registration and listing.</p>
+                        <h4>User Registration</h4>
+                        <p>This page shows an example of a simple user registration and listing.</p>
                     </div>
                 </div>
     
