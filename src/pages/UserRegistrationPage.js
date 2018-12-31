@@ -1,7 +1,7 @@
 import React, { Component }   from 'react';
 import { UserList } from '../layout/UserList';
 
-const API = 'http://localhost:3001/';
+const API = 'https://react-showcase-server.herokuapp.com/';
 const DEFAULT_QUERY = 'users?_sort=id&_order=desc';
 
 export class UserRegistrationPage extends Component {
