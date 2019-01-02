@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { UserItem } from './UserItem';
 
-const API = 'http://localhost:3001/';
-const DEFAULT_QUERY = 'users';
-
 export class UserList extends Component{
     render() {
         const users = this.props.users;

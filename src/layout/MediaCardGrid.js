@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import { MediaCard } from './MediaCard';
 
-const API = 'https://react-showcase-server.herokuapp.com/';
+const API = 'http://localhost:3001/';
 const DEFAULT_QUERY = 'cards';
 
 export class MediaCardGrid extends Component{
