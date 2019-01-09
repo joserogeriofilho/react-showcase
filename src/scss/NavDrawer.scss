@@ -1,3 +1,20 @@
+.scrim{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .35);
+    position: absolute;
+    z-index: 50;
+
+    @include media-breakpoint-up(xl){
+        display: none;
+    }
+
+    &.nav-drawer-visible{
+        display: block;
+    }
+}
+
 .nav-drawer{
     background: lightgray;
 
@@ -9,7 +26,7 @@
     position: absolute;
     transition: .2s ease-in-out;
 
-    z-index: 999;
+    z-index: 90;
 
     @include media-breakpoint-up(xl){
         margin-left: 0px;

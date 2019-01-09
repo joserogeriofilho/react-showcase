@@ -6,7 +6,6 @@ import './App.scss';
 import { NavDrawer } from './layout/NavDrawer';
 import { AppBar } from './layout/AppBar';
 import { Content } from './layout/Content';
-import { BlackenedScreen } from './layout/BlackenedScreen';
 
 
 class App extends Component {
@@ -64,9 +63,7 @@ class App extends Component {
               onCloseNavDrawer={closeNavDrawer}
             />
 
-            <div className="wrapper">
-              <BlackenedScreen visible={navDrawerOpened} onCloseNavDrawer={closeNavDrawer}/>
-              
+            <div className="wrapper">              
               <AppBar screenWidth={screenWidth} onOpenNavDrawer={openNavDrawer}/>
               <Content screenWidth={screenWidth}/>
             </div>
