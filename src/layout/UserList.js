@@ -3,9 +3,9 @@ import { UserItem } from './UserItem';
 
 export class UserList extends Component{
     render() {
-        const users = this.props.users;
-        const isLoading = this.props.isLoading;
-        const error = this.props.error;
+        let users = this.props.users;
+        let isLoading = this.props.isLoading;
+        let error = this.props.error;
 
         if(isLoading){
             return <p>Loading...</p>

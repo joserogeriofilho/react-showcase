@@ -60,7 +60,7 @@ class App extends Component {
         <div className="App">
             <NavDrawer
               visible={navDrawerOpened}
-              onCloseNavDrawer={closeNavDrawer}
+              onClose={closeNavDrawer}
             />
 
             <div className="wrapper">              
