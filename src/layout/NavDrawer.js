@@ -29,7 +29,7 @@ export class NavDrawer extends Component {
                     <div className="nav-drawer-body">
                         <ul className="list">
                             { itens.map(i =>
-                                <NavItem key={ i.id } id={i.id} onClick={onClose} link={i.link} label={i.label} />
+                                <NavItem key={ i.id } id={i.id} onCloseNavDrawer={onClose} link={i.link} label={i.label} />
                             )}
                         </ul>
                     </div>
