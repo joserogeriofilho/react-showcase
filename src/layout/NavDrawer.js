@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavItem } from './NavItem';
 
 export class NavDrawer extends Component {
 
@@ -29,9 +29,7 @@ export class NavDrawer extends Component {
                     <div className="nav-drawer-body">
                         <ul className="list">
                             { itens.map(i =>
-                                <li key={ i.id } className={ "list-item " }>
-                                    <Link onClick={ onClose } to={ i.link }> { i.label } </Link>
-                                </li>
+                                <NavItem key={ i.id } id={i.id} onClick={onClose} link={i.link} label={i.label} />
                             )}
                         </ul>
                     </div>

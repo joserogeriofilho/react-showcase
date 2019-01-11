@@ -55,6 +55,12 @@
             li{
                 list-style-type: none;
                 margin: 12px 0 12px 0;
+
+                &.active-link{
+                    background-color: lightgray;
+        
+                    a{ color: darkslategray; }
+                }
             }
         }
     }

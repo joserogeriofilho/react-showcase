@@ -22,11 +22,10 @@
     .nav-drawer-body{
         padding: 18px 8px 16px 8px;
 
-        .active-link{
-            background-color: $light-primary;
-
-            a{
-                color: $dark-primary;
+        ul{
+            li{
+                .active-link{
+                }
             }
         }
     }
