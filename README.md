@@ -3,7 +3,7 @@
 # A React Showcase Project
 A simple React project made with the purpose of study the framework as well as provide a quick reference for its most recurrent patterns.
 
-## Functionalities
+## Components, Functionalities and Patterns
 
 * Responsive design using Bootstrap 4;
 * Presents a navigation drawer and an app bar component;
@@ -11,12 +11,12 @@ A simple React project made with the purpose of study the framework as well as p
 * Use of `react-router-dom` for routing;
 * Stateful parents and stateless children;
 
-## Installing and Running the React Showcase
+## Installing and Running
 
-1. Install (if you haven't already) JSON Server, a fake REST API tool, by running `npm install -g json-server`;
-2. Install the dependencies of the project by executing `npm install` in the root directory;
-3. Enter the `/json-server` directory and run `json-server db.json`;
-4. Back into the root directory of the project, run `npm start`;
+1. Install (if you haven't already) JSON Server, a fake REST API tool, by running `> npm install -g json-server`;
+2. Install the project's dependencies by executing the `> npm install` command in the root directory;
+3. Enter the `/json-server` directory and start the mocked REST API by running `> json-server db.json`;
+4. Back into the root directory of the project, run `> npm start`;
 
 ## Live Demo
 If in a first attempt the application fails to load showing an **application error page**, please try refreshing the browser since the Heroku plataform put applications to sleep after some time of inactivity. The second request should work wihtout any problem.
