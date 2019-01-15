@@ -1,44 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center"><img alt="React Showcase Project" src="https://user-images.githubusercontent.com/12038461/51156325-bc311500-1859-11e9-96de-fcc8bc0ba3c2.png"></p>
 
-## Available Scripts
+# A React Showcase Project
+A simple React project made with the purpose of study the framework as well as provide a quick reference for its most recurrent patterns.
 
-In the project directory, you can run:
+## Functionalities
 
-### `npm start`
+* Responsive design using Bootstrap 4;
+* Presents a navigation drawer and an app bar component;
+* Use of the Fetch API to get and write data to a mocked REST API;
+* Use of `react-router-dom` for routing;
+* Stateful parents and stateless children;
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installing and Running the React Showcase
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1. Install (if you haven't already) JSON Server, a fake REST API tool, by running `npm install -g json-server`;
+2. Install the dependencies of the project by executing `npm install` in the root directory;
+3. Enter the `/json-server` directory and run `json-server db.json`;
+4. Back into the root directory of the project, run `npm start`;
 
-### `npm test`
+## Live Demo
+If in a first attempt the application fails to load showing an _application error page_, please try refreshing the browser since the Heroku plataform put applications to sleep after some time of inactivity. The second request should work wihtout any problem.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://react-showcase-client.herokuapp.com
 
-### `npm run build`
+## The Author
+* [Behance](https://www.behance.net/joserogeriofilho)
+* [Linkedin](https://www.linkedin.com/in/joserogeriofilho/)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
+![Attribution 4.0 International CC License](https://i.creativecommons.org/l/by/4.0/88x31.png)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
