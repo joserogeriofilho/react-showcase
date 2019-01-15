@@ -1,7 +1,7 @@
 <p align="center"><img alt="React Showcase Project" src="https://user-images.githubusercontent.com/12038461/51156325-bc311500-1859-11e9-96de-fcc8bc0ba3c2.png"></p>
 
 # A React Showcase Project
-A simple React project made with the purpose of study the framework as well as provide a quick reference for its most recurrent patterns.
+A simple React project made with the purpose of studying the framework as well as provide a quick reference for its most recurrent patterns.
 
 ## Components, Functionalities and Patterns
 
