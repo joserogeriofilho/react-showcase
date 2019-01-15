@@ -19,7 +19,7 @@ A simple React project made with the purpose of study the framework as well as p
 4. Back into the root directory of the project, run `npm start`;
 
 ## Live Demo
-If in a first attempt the application fails to load showing an _application error page_, please try refreshing the browser since the Heroku plataform put applications to sleep after some time of inactivity. The second request should work wihtout any problem.
+If in a first attempt the application fails to load showing an **application error page**, please try refreshing the browser since the Heroku plataform put applications to sleep after some time of inactivity. The second request should work wihtout any problem.
 
 https://react-showcase-client.herokuapp.com
 
