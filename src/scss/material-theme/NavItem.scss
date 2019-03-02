@@ -1,0 +1,37 @@
+.nav-drawer{
+    .nav-drawer-body{
+        ul{
+            .list-item{
+                display: flex;
+                align-items: center;
+                border-radius: 4px;
+                height: 40px;
+                margin: 0 0 8px 0;
+            
+                .list-icon{
+                    color: $secondary-text;
+                    font-size: 20px;
+                    margin: 0 24px 0 8px;
+                }
+            
+                .list-link{
+                    color: $primary-text;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            
+                &.active-link{
+                    background-color: $light-primary;
+            
+                    .list-icon{
+                        color: $dark-primary;
+                    }
+                
+                    .list-link{
+                        color: $dark-primary;
+                    }
+                }
+            }
+        }
+    }
+}

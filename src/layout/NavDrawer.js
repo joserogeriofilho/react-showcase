@@ -12,9 +12,9 @@ export class NavDrawer extends Component {
         let onClose = this.props.onClose;
 
         let itens = [
-            { id:1, label:"Advanced Search", link:"/advancedsearch" },
-            { id:2, label:"User Registration", link:"/userregistration" },
-            { id:3, label:"Card Grid", link:"/cardgrid" }
+            { id:1, icon:"home", label:"Advanced Search", link:"/advancedsearch" },
+            { id:2, icon:"person", label:"User Registration", link:"/userregistration" },
+            { id:3, icon:"collections", label:"Card Grid", link:"/cardgrid" }
         ];
 
         return (
@@ -23,13 +23,21 @@ export class NavDrawer extends Component {
 
                 <div className={ "nav-drawer " + isVisible }>
                     <div className="nav-drawer-header">
-                        <h6>REACT SHOWCASE</h6>
+                        <div className="app-title">
+                            <span className="bold">R</span>eact<br></br><span className="bold">S</span>howcase
+                        </div>
                     </div>
 
                     <div className="nav-drawer-body">
                         <ul className="list">
                             { itens.map(i =>
-                                <NavItem key={ i.id } id={i.id} onCloseNavDrawer={onClose} link={i.link} label={i.label} />
+                                <NavItem
+                                    key={ i.id }
+                                    id={ i.id }
+                                    icon={ i.icon }
+                                    label={ i.label }
+                                    link={ i.link }
+                                    onCloseNavDrawer={ onClose } />
                             )}
                         </ul>
                     </div>

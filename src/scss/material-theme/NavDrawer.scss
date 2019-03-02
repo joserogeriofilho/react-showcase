@@ -2,7 +2,7 @@
     background-color: white;
     
     @include media-breakpoint-up(xl){
-        border-color: $light-primary;
+        border-color: $divider;
         border-style: solid;
         border-width: 0 1px 0 0;
     }
@@ -12,21 +12,26 @@
     }
 
     .nav-drawer-header{
-        background-color: white;
-        border-color: $light-primary;
-        border-style: solid;
-        border-width: 0 0 1px 0;
-        color: $primary-text;
+        background-color: $dark-primary;
+        background-image: url(./img/navdrawer-header-purple.png);
+        color: $text;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 16px;
+
+        .app-title{
+            text-align: left;
+            font-size: 20px;
+            font-weight: 300;
+
+            .bold{
+                font-weight: 700;
+            }
+        }
     }
 
     .nav-drawer-body{
         padding: 18px 8px 16px 8px;
-
-        ul{
-            li{
-                .active-link{
-                }
-            }
-        }
     }
 }

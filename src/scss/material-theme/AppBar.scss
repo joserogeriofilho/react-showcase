@@ -1,8 +1,8 @@
 .regular-top-app-bar{
-    background-color: $primary;
+    background-color: $white;
     @include elevation(4);
 
-    color: $text;
+    color: $primary-text;
     height: 56px;
 
     display: flex;
