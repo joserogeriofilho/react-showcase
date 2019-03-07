@@ -20,7 +20,7 @@
                     font-weight: 500;
                 }
             
-                &.active-link{
+                &.active-link, &.active-link:hover{
                     background-color: $light-primary;
             
                     .list-icon{
@@ -30,6 +30,10 @@
                     .list-link{
                         color: $dark-primary;
                     }
+                }
+
+                &:hover{
+                    background-color: rgba($gray100,0.35);
                 }
             }
         }
