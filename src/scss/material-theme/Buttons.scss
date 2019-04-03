@@ -1,0 +1,22 @@
+.btn{
+    &.btn-flat{
+        background-color: transparent;
+        border: none;
+        font-weight: 500;
+        padding: 6px 8px 6px 8px;
+
+        &.btn-primary{
+            color: $primary;
+
+            &:hover{
+                background-color: rgba( $light-primary, .35 );
+                color: $primary;
+            }
+    
+            &:active{
+                background-color: $light-primary;
+                color: $primary;
+            }
+        }
+    }
+}

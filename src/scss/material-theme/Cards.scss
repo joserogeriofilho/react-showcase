@@ -2,7 +2,7 @@
     border-width: 1px;
     border-style: solid;
     border-color: $gray100;
-    padding: 0px;
+    padding: 0;
 
     @include elevation(2);
 
@@ -36,17 +36,27 @@
             margin-bottom: 0;
         }
 
+        .secondary-text{
+            color: $gray400;
+            font-size: 14px;
+        }
+
         &:last-child {
             margin-bottom: 16px;
         }
     }
 
     .card-supporting-text{
+        font-size: 14px;
         margin: 16px 16px 0 16px;
 
         &:last-child {
             margin-bottom: 16px;
         }
+    }
+
+    .card-actions{
+        margin: 16px 8px 8px 8px;
     }
 
     &.card-100-height{
