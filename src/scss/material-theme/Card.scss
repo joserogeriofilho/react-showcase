@@ -1,0 +1,55 @@
+.card{
+    border-width: 1px;
+    border-style: solid;
+    border-color: $gray100;
+    padding: 0px;
+
+    @include elevation(2);
+
+    .card-rich-media{
+        margin-top: 16px;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        &:first-child {
+            margin-top: 0;
+
+            img{
+                border-radius: 4px 4px 0 0;
+            }
+        }
+
+        &:last-child {
+            img{
+                border-radius: 0 0 4px 4px;
+            }
+        }
+    }
+
+    .card-primary-title{
+        margin: 16px 16px 0 16px;
+
+        h6{
+            margin-bottom: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 16px;
+        }
+    }
+
+    .card-supporting-text{
+        margin: 16px 16px 0 16px;
+
+        &:last-child {
+            margin-bottom: 16px;
+        }
+    }
+
+    &.card-100-height{
+        height: 100%;
+    }
+}
