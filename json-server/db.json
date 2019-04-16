@@ -193,6 +193,20 @@
       "userName": "banacleto",
       "email": "banacleto@gmail.com",
       "id": 23
+    },
+    {
+      "firstName": "Roger",
+      "lastName": "Bezerra Barbosa Filho",
+      "userName": "roger.sama",
+      "email": "roger.sama@gmail.com",
+      "id": 24
+    },
+    {
+      "firstName": "Edward",
+      "lastName": "Conan Doyle",
+      "userName": "ed.doyle",
+      "email": "ed.doyle@gmail.com",
+      "id": 25
     }
   ]
 }

@@ -9,18 +9,19 @@ export class UserRegistrationPage extends Component {
         super(props);
 
         this.state = {
-            users: [],
-            isLoading: false,
-            error: null,
             lastName: '',
             firstName: '',
             userName: '',
-            email: ''
+            email: '',
+            users: [],
+            isLoading: false,
+            error: null
         };
 
         this.getUsers = this.getUsers.bind(this);
         this.postNewUser = this.postNewUser.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.clearForm = this.clearForm.bind(this);
     }
 
     postNewUser(){
@@ -43,10 +44,20 @@ export class UserRegistrationPage extends Component {
             }
         }).then((data) => {
             console.log('Insertion of ' + JSON.stringify(data));
+            this.clearForm();
             this.getUsers();
         })
         .catch((err) => console.log(err));
 
+    }
+
+    clearForm(){
+        this.setState({ ["lastName"]: '' });
+        this.setState({ ["firstName"]: '' });
+        this.setState({ ["userName"]: '' });
+        this.setState({ ["email"]: '' });
+
+        localStorage.clear();
     }
 
     getUsers() {
@@ -68,10 +79,34 @@ export class UserRegistrationPage extends Component {
         let change = {};
         change[event.target.id] = event.target.value;
         this.setState(change);
+
+        // update localStorage
+        localStorage.setItem(event.target.id, event.target.value);
+    }
+
+    hydrateStateWithLocalStorage() {
+        // for all items in state
+        for (let key in this.state) {
+            // if the key exists in localStorage
+            if (localStorage.hasOwnProperty(key)) {
+                // get the key's value from localStorage
+                let value = localStorage.getItem(key);
+
+                // parse the localStorage string and setState
+                try {
+                    value = JSON.parse(value);
+                    this.setState({ [key]: value });
+                } catch (e) {
+                    // handle empty string
+                    this.setState({ [key]: value });
+                }
+            }
+        }
     }
 
     componentDidMount() {
         this.getUsers();
+        this.hydrateStateWithLocalStorage();
     }
 
     render(){
@@ -156,8 +191,10 @@ export class UserRegistrationPage extends Component {
                                 </div>
                             </div>
                         </div>
-    
-                        <button type="submit" className="btn btn-primary float-right" onClick={this.postNewUser}>Register</button>
+
+                        <button type="submit" className="btn btn-flat btn-default float-left" onClick={this.clearForm}>CLEAR</button>
+
+                        <button type="submit" className="btn btn-primary float-right" onClick={this.postNewUser}>REGISTER</button>
                     </div>
                 </div>
     
