@@ -6,6 +6,10 @@
 
     @include elevation(2);
 
+    .card-header{
+
+    }
+
     .card-rich-media{
         margin-top: 16px;
 
@@ -57,6 +61,7 @@
 
     .card-actions{
         margin: 16px 8px 8px 8px;
+        margin-top: auto;
     }
 
     &.card-100-height{

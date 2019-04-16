@@ -2,7 +2,7 @@ import React from 'react';
 
 export function MediaCard(props) {
     return (
-        <div key={props.id} className="col-sm">
+        <div key={props.id} className="col-sm mb-4 mb-sm-0">
             <div className="card card-100-height">
                 <div className="card-rich-media">
                     <img src={props.image} />
