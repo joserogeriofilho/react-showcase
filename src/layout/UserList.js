@@ -7,6 +7,9 @@ export class UserList extends Component{
         let isLoading = this.props.isLoading;
         let error = this.props.error;
 
+        let onDeleteUser = this.props.onDeleteUser;
+        let getUsers = this.props.getUsers;
+
         if(isLoading){
             return <p>Loading...</p>
         }
@@ -20,10 +23,13 @@ export class UserList extends Component{
                 {users.map(u =>
                     <UserItem
                         key={u.id}
+                        id={u.id}
                         firstName={u.firstName}
                         lastName={u.lastName}
                         username={u.userName}
-                        email={u.email} />
+                        email={u.email} 
+                        onDeleteUser={ onDeleteUser }
+                        getUsers = { getUsers } />
                 )}
             </div>
         );

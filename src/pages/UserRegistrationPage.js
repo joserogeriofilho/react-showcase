@@ -2,7 +2,8 @@ import React, { Component }   from 'react';
 import { UserList } from '../layout/UserList';
 
 const API = 'http://localhost:3001/';
-const DEFAULT_QUERY = 'users?_sort=id&_order=desc';
+const DEFAULT_QUERY = 'users';
+const SORT_QUERY = '?_sort=id&_order=desc';
 
 export class UserRegistrationPage extends Component {
     constructor(props){
@@ -48,22 +49,30 @@ export class UserRegistrationPage extends Component {
             this.getUsers();
         })
         .catch((err) => console.log(err));
-
     }
 
-    clearForm(){
-        this.setState({ ["lastName"]: '' });
-        this.setState({ ["firstName"]: '' });
-        this.setState({ ["userName"]: '' });
-        this.setState({ ["email"]: '' });
-
-        localStorage.clear();
+    deleteUser(id){
+        fetch(API + DEFAULT_QUERY + '/' + id,
+            {
+                method: 'DELETE',
+            }
+        ).then(response => {
+            if(response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Something went wrong...')
+            }
+        }).then(() => {
+            console.log('Deletion successful!');
+            this.getUsers();
+        })
+        .catch((err) => console.log(err));
     }
 
     getUsers() {
         this.setState({ isLoading: true });
 
-        fetch(API + DEFAULT_QUERY)
+        fetch(API + DEFAULT_QUERY + SORT_QUERY)
             .then(response => {
                 if(response.ok) {
                     return response.json()
@@ -73,6 +82,15 @@ export class UserRegistrationPage extends Component {
             })
             .then(data => this.setState({ users: data, isLoading: false}))
             .catch(error => this.setState({ error, isLoading: false }));
+    }
+
+    clearForm(){
+        this.setState({ ["lastName"]: '' });
+        this.setState({ ["firstName"]: '' });
+        this.setState({ ["userName"]: '' });
+        this.setState({ ["email"]: '' });
+
+        localStorage.clear();
     }
 
     handleChange(event){
@@ -115,6 +133,8 @@ export class UserRegistrationPage extends Component {
         const error = this.state.error;
 
         const handleChange = this.handleChange;
+        const deleteUser = this.deleteUser;
+        const getUsers = this.getUsers;
 
         const lastName = this.state.lastName;
         const firstName = this.state.firstName;
@@ -202,7 +222,12 @@ export class UserRegistrationPage extends Component {
                     <div className="card-header">List of Users</div>
     
                     <div className="card-body">
-                        <UserList users={users} isLoading={isLoading} error={error} />
+                        <UserList
+                            users={ users }
+                            isLoading={ isLoading }
+                            error={ error } 
+                            onDeleteUser={ deleteUser } 
+                            getUsers={ getUsers } />
                     </div>
                 </div>
     
