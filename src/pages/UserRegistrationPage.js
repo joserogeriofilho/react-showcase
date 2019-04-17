@@ -151,7 +151,7 @@ export class UserRegistrationPage extends Component {
                 </div>
     
                 <div className="card mb-4">
-                    <div className="card-header">Register Here</div>
+                    <div className="card-header"><h6>REGISTER HERE</h6></div>
     
                     <div className="card-body">     
                         <div className="row">
@@ -219,7 +219,7 @@ export class UserRegistrationPage extends Component {
                 </div>
     
                 <div className="card mb-4">
-                    <div className="card-header">List of Users</div>
+                    <div className="card-header"><h6>LIST OF USERS</h6></div>
     
                     <div className="card-body">
                         <UserList

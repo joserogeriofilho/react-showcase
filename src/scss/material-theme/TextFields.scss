@@ -1,0 +1,31 @@
+.form-group{
+    label{
+        font-size: 12px;
+    }
+    
+    input{
+        background-color: transparent;
+        
+        &::placeholder{
+            color: $gray400;
+        }
+    }
+
+    &:focus-within{
+        label{
+            color: rgba($primary, 0.75);
+            font-weight: 600;
+        }
+        input{
+            background-color: transparent;
+            border-color: rgba($primary,0.65);
+            border-width: 2px;
+            box-shadow: none;
+            color: black;
+
+            &::placeholder{
+                font-size: 0;
+            }
+        }
+    }
+}
