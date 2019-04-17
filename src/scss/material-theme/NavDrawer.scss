@@ -1,5 +1,5 @@
 .nav-drawer{
-    background-color: white;
+    background-color: lighten($gray100, 10%);
     
     @include media-breakpoint-up(xl){
         border-color: $divider;

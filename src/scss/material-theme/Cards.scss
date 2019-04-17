@@ -8,6 +8,10 @@
 
     .card-header{
         background-color: transparent;
+
+        *{
+            margin-bottom: 0;
+        }
     }
 
     .card-rich-media{
