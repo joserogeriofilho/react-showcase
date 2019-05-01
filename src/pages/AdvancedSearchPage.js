@@ -5,7 +5,7 @@ export function AdvancedSearchPage(props) {
         <div className="content container-fluid">
             <div className="row">
                 <div className="col-sm">
-                    <h4>Advanced Search</h4>
+                    <h5>Advanced Search</h5>
                     <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                 </div>
             </div>

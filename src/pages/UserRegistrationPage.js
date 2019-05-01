@@ -145,17 +145,17 @@ export class UserRegistrationPage extends Component {
             <div className="content container-fluid">
                 <div className="row mb-4">
                     <div className="col-sm">
-                        <h4>User Registration</h4>
+                        <h5>User Registration</h5>
                         <p>This page shows an example of a simple user registration and listing.</p>
                     </div>
                 </div>
     
                 <div className="card mb-4">
-                    <div className="card-header"><h6>REGISTER HERE</h6></div>
+                    <div className="card-header"><h6>USER REGISTRATION</h6></div>
     
                     <div className="card-body">     
                         <div className="row">
-                            <div className="col">
+                            <div className="col-12 col-md-6">
                                 <div className="form-group">
                                     <label htmlFor="lastName">Last Name</label>
                                     <input
@@ -168,7 +168,7 @@ export class UserRegistrationPage extends Component {
                                 </div>       
                             </div>
 
-                            <div className="col">
+                            <div className="col-12 col-md-6">
                                 <div className="form-group">
                                     <label htmlFor="firstName">First Name</label>
                                     <input
@@ -181,7 +181,7 @@ export class UserRegistrationPage extends Component {
                                 </div>       
                             </div>
 
-                            <div className="col">
+                            <div className="col-12  col-md-6">
                                 <div className="form-group">
                                     <label htmlFor="userName">User Name</label>
                                     <input
@@ -193,10 +193,8 @@ export class UserRegistrationPage extends Component {
                                         placeholder="Enter your user name" />
                                 </div>       
                             </div>
-                        </div>
-
-                        <div className="row">    
-                            <div className="col-8">
+ 
+                            <div className="col-12  col-md-6">
                                 <div className="form-group">
                                     <label htmlFor="email">Email address</label>
                                     <input

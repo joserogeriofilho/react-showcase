@@ -9,6 +9,7 @@ export class Content extends Component {
     render(){
         return (
             <Switch>
+                <Route path="/" exact={true} component={AdvancedSearchPage}/>
                 <Route path="/advancedsearch" exact={true} component={AdvancedSearchPage}/>
                 <Route
                     path="/userregistration"

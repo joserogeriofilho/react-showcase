@@ -6,7 +6,7 @@ export function CardGridPage(props) {
         <div className="content container-fluid">
             <div className="row">
                 <div className="col-sm">
-                    <h4>Card Grid</h4>
+                    <h5>Card Grid</h5>
                     <p>This page shows a simple example of how to display a list of components using the map() array function.</p>
                 </div>
             </div>
