@@ -1,7 +1,8 @@
-<p align="center"><img alt="React Showcase Project" src="https://user-images.githubusercontent.com/12038461/51156325-bc311500-1859-11e9-96de-fcc8bc0ba3c2.png"></p>
+<p align="center"><img alt="React Showcase Project" src="https://user-images.githubusercontent.com/12038461/58048946-18ff4d80-7b22-11e9-9734-c9202a062389.png"></p>
 
-# A React Showcase Project
-A simple React project made with the purpose of studying the library as well as provide a quick reference for its most recurrent patterns.
+# React Showcase
+#### A simple yet complete ReactJS application
+This application provides a user registration screen with insertion and deletion of entries plus a screen with a grid of media cards. All the data is obtained by HTTP requests to a mocked REST API using the json-server library. The routing was made with the react-route library.
 
 ## Components, Functionalities and Patterns
 
