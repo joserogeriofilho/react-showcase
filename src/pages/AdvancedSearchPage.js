@@ -12,22 +12,31 @@ export function AdvancedSearchPage(props) {
             </div>
 
             <div className="row justify-content-md-center mb-4">
-                <div className="col-xs-12 col-xl-8">
-                    <div className="card">
+                <div className="col-xs-12 col-xl-6 mb-4">
+                    <div className="card card-100-height">
                         <div className="card-body">
-                            <h5 className="mb-2">Lorem ipsum dolor sit amet</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum gravida leo, eu auctor velit. Sed cursus fermentum consequat. Sed magna quam, sollicitudin eu neque malesuada, tincidunt dignissim ipsum. Ut ut imperdiet magna, id semper massa. Aenean molestie nunc eget ultrices fermentum. Integer quis lorem ut nunc suscipit malesuada. Pellentesque non dolor nec erat molestie egestas laoreet eget nisi.</p>
+                            <h5 className="mb-2">Components, Functionalities and Patterns</h5>
+                            <ul>
+                                <li>Responsive design using Bootstrap 4;</li>
+                                <li>Presents a navigation drawer and an app bar component;</li>
+                                <li>Use of the Fetch API to get and write data to a mocked REST API;</li>
+                                <li>Use of <code>react-router-dom</code> for routing;</li>
+                                <li>Stateful parents and stateless children;</li>
+                            </ul>                            
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="row justify-content-md-center mb-4">
-                <div className="col-xs-12 col-xl-8">
-                    <div className="card">
+                <div className="col-xs-12 col-xl-6 mb-4">
+                    <div className="card card-100-height">
                         <div className="card-body">
-                            <h5 className="mb-2">Vestibulum vel ultrices nisi</h5>
-                            <p>Vestibulum vel ultrices nisi, ut lobortis lacus. Fusce pharetra ante sed quam cursus, in pulvinar est interdum. Proin pretium turpis quis vulputate viverra. Ut euismod vehicula ultricies. Fusce tempus quam nunc, ac hendrerit turpis blandit et. Duis imperdiet in arcu nec suscipit.</p>
+                            <h5 className="mb-2">Installing and Running</h5>
+                            <ol>
+                                <li>Install (if you haven't already) JSON Server, a fake REST API tool, by running <code>> npm install -g json-server</code>;</li>
+                                <li>Install the project's dependencies by executing the <code>> npm install</code> command in the root directory;</li>
+                                <li>Enter the <code>/json-server</code> directory and start the mock REST API by running <code>> json-server db.json</code>;</li>
+                                <li>Back into the root directory of the project, run <code>> npm start</code>;</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
