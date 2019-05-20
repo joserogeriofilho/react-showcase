@@ -1,4 +1,4 @@
-<p align="center"><img alt="React Showcase Project" src="https://user-images.githubusercontent.com/12038461/51156325-bc311500-1859-11e9-96de-fcc8bc0ba3c2.png"></p>
+<p align="center"><img alt="React Showcase Project" src="https://user-images.githubusercontent.com/12038461/58048946-18ff4d80-7b22-11e9-9734-c9202a062389.png"></p>
 
 # React Showcase
 #### A simple yet complete ReactJS application
