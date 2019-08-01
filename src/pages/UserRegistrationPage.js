@@ -1,7 +1,7 @@
 import React, { Component }   from 'react';
 import { UserList } from '../layout/UserList';
 
-const API = 'http://localhost:3001/';
+const API_URL = process.env.REACT_APP_API_URL;
 const DEFAULT_QUERY = 'users';
 const SORT_QUERY = '?_sort=id&_order=desc';
 
@@ -31,7 +31,7 @@ export class UserRegistrationPage extends Component {
         const userName = this.state.userName;
         const email = this.state.email;
 
-        fetch(API + DEFAULT_QUERY,
+        fetch(API_URL + DEFAULT_QUERY,
             {
                 method: 'POST',
                 headers: new Headers({'Content-Type': 'application/json'}),
@@ -52,7 +52,7 @@ export class UserRegistrationPage extends Component {
     }
 
     deleteUser(id){
-        fetch(API + DEFAULT_QUERY + '/' + id,
+        fetch(API_URL + DEFAULT_QUERY + '/' + id,
             {
                 method: 'DELETE',
             }
@@ -72,7 +72,7 @@ export class UserRegistrationPage extends Component {
     getUsers() {
         this.setState({ isLoading: true });
 
-        fetch(API + DEFAULT_QUERY + SORT_QUERY)
+        fetch(API_URL + DEFAULT_QUERY + SORT_QUERY)
             .then(response => {
                 if(response.ok) {
                     return response.json()

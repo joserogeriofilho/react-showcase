@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import { MediaCard } from './MediaCard';
 
-const API = 'http://localhost:3001/';
+const API_URL = process.env.REACT_APP_API_URL;
 const DEFAULT_QUERY = 'cards';
 
 export class MediaCardGrid extends Component{
@@ -18,7 +18,7 @@ export class MediaCardGrid extends Component{
     componentDidMount() {
         this.setState({ isLoading: true });
 
-        fetch(API + DEFAULT_QUERY)
+        fetch(API_URL + DEFAULT_QUERY)
             .then(response => {
                 if(response.ok) {
                     return response.json()
