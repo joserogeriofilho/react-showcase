@@ -12,6 +12,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -24,5 +26,12 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "volta": {
+    "node": "14.0.0"
+  },
+  "homepage": "http://joserogeriofilho.github.io/react-showcase",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
